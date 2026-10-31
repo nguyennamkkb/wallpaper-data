@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallpaper Data — Trang chủ</title>
+  <meta name="description" content="Wallpaper Data — bộ sưu tập dữ liệu hình nền chất lượng cao, sẵn sàng sử dụng." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --bg-soft: #12151d;
+      --card: #181c26;
+      --border: #262b38;
+      --text: #e8eaef;
+      --muted: #9aa3b2;
+      --accent: #6c8cff;
+      --accent-2: #a78bfa;
+      --grad: linear-gradient(135deg, #6c8cff 0%, #a78bfa 100%);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(11,13,18,0.7);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .nav-links { display: flex; gap: 28px; color: var(--muted); font-size: 14px; }
+    .nav-links a:hover { color: var(--text); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 14px;
+      border: 1px solid transparent; cursor: pointer; transition: transform .15s ease, opacity .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--grad); color: #fff; }
+    .btn-ghost { border-color: var(--border); color: var(--text); background: transparent; }
+
+    /* Hero */
+    .hero { padding: 96px 0 64px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(600px 300px at 50% 0%, rgba(108,140,255,.25), transparent 70%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(108,140,255,.12); border: 1px solid rgba(108,140,255,.3);
+      color: #b8c6ff; font-size: 13px; font-weight: 500; margin-bottom: 24px;
+    }
+    h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+    h1 .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero p { max-width: 640px; margin: 20px auto 32px; color: var(--muted); font-size: 18px; }
+    .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .hero-stats { display: flex; gap: 40px; justify-content: center; margin-top: 56px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat .num { font-size: 28px; font-weight: 800; }
+    .stat .lbl { color: var(--muted); font-size: 13px; }
+
+    /* Features */
+    section { padding: 80px 0; }
+    .section-title { text-align: center; margin-bottom: 48px; }
+    .section-title h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; letter-spacing: -0.02em; }
+    .section-title p { color: var(--muted); margin-top: 12px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 24px; transition: border-color .2s ease, transform .2s ease;
+    }
+    .card:hover { border-color: #3a4155; transform: translateY(-2px); }
+    .card .icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: grid; place-items: center; font-size: 20px; margin-bottom: 16px;
+      background: rgba(108,140,255,.12);
+    }
+    .card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 14px; }
+
+    /* Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+    .tile {
+      aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; position: relative;
+      background: linear-gradient(135deg, #1a1f2e, #0b0d12);
+      border: 1px solid var(--border);
+    }
+    .tile::after {
+      content: attr(data-label); position: absolute; bottom: 10px; left: 12px;
+      font-size: 12px; color: #fff; font-weight: 600;
+      text-shadow: 0 1px 4px rgba(0,0,0,.6);
+    }
+
+    /* CTA */
+    .cta-box {
+      background: linear-gradient(135deg, rgba(108,140,255,.15), rgba(167,139,250,.15));
+      border: 1px solid var(--border); border-radius: 20px; padding: 48px 24px;
+      text-align: center;
+    }
+    .cta-box h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; }
+    .cta-box p { color: var(--muted); margin: 12px 0 24px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 32px 0; color: var(--muted); font-size: 13px; }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">Wallpaper<span>Data</span></div>
+      <div class="nav-links">
+        <a href="#features">Tính năng</a>
+        <a href="#gallery">Bộ sưu tập</a>
+        <a href="#about">Giới thiệu</a>
+      </div>
+      <a class="btn btn-primary" href="#cta">Bắt đầu</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="badge">✨ Dữ liệu hình nền thế hệ mới</span>
+      <h1>Hình nền đẹp,<br /><span class="grad">dữ liệu rõ ràng.</span></h1>
+      <p>Wallpaper Data mang đến bộ sưu tập hình nền chất lượng cao kèm metadata đầy đủ — sẵn sàng cho thiết kế, phát triển và nghiên cứu.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#gallery">Khám phá ngay</a>
+        <a class="btn btn-ghost" href="#features">Tìm hiểu thêm</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">10K+</div><div class="lbl">Hình nền</div></div>
+        <div class="stat"><div class="num">4K</div><div class="lbl">Độ phân giải</div></div>
+        <div class="stat"><div class="num">100%</div><div class="lbl">Miễn phí</div></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tính năng nổi bật</h2>
+        <p>Mọi thứ bạn cần để làm việc với dữ liệu hình nền, trong một nơi.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Chất lượng cao</h3>
+          <p>Hình nền độ phân giải 4K, tối ưu cho màn hình lớn và thiết bị di động.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏷️</div>
+          <h3>Metadata đầy đủ</h3>
+          <p>Thông tin màu sắc, danh mục, từ khóa và tác giả kèm theo mỗi hình.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Truy xuất nhanh</h3>
+          <p>API và tìm kiếm nhanh giúp bạn lấy đúng hình nền chỉ trong tích tắc.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📦</div>
+          <h3>Dễ tích hợp</h3>
+          <p>Xuất JSON/CSV, tương thích với mọi stack và quy trình làm việc.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Bộ sưu tập</h2>
+        <p>Một số hình nền tiêu biểu từ bộ sưu tập của chúng tôi.</p>
+      </div>
+      <div class="gallery">
+        <div class="tile" style="background: linear-gradient(135deg,#667eea,#764ba2)" data-label="Aurora"></div>
+        <div class="tile" style="background: linear-gradient(135deg,#f093fb,#f5576c)" data-label="Sunset"></div>
+        <div class="tile" style="background: linear-gradient(135deg,#4facfe,#00f2fe)" data-label="Ocean"></div>
+        <div class="tile" style="background: linear-gradient(135deg,#43e97b,#38f9d7)" data-label="Forest"></div>
+        <div class="tile" style="background: linear-gradient(135deg,#fa709a,#fee140)" data-label="Bloom"></div>
+        <div class="tile" style="background: linear-gradient(135deg,#30cfd0,#330867)" data-label="Cosmos"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Về chúng tôi</h2>
+        <p>Wallpaper Data là dự án mã nguồn mở tổng hợp và chuẩn hoá dữ liệu hình nền, giúp nhà phát triển và nhà thiết kế tiết kiệm thời gian tìm kiếm.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Sẵn sàng bắt đầu?</h2>
+        <p>Khám phá bộ sưu tập và tích hợp vào dự án của bạn ngay hôm nay.</p>
+        <a class="btn btn-primary" href="#gallery">Khám phá bộ sưu tập</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Wallpaper Data. All rights reserved.</div>
+      <div>Triển khai trên Cloudflare Pages</div>
+    </div>
+  </footer>
+</body>
+</html>
