@@ -1,0 +1,31 @@
+{
+  "version": "wallpaper-1",
+  "packs": [
+    { "id": "wp-01-golden-hour",      "name": "Golden Hour",       "images": ["01","02","03","04","05"] },
+    { "id": "wp-02-misty-mountain",   "name": "Misty Mountain",    "images": ["01","02","03","04","05"] },
+    { "id": "wp-03-ocean-coast",      "name": "Ocean & Coast",     "images": ["01","02","03","04","05"] },
+    { "id": "wp-04-desert-dunes",     "name": "Desert Dunes",      "images": ["01","02","03","04","05"] },
+    { "id": "wp-05-forest-light",     "name": "Forest Light",      "images": ["01","02","03","04","05"] },
+    { "id": "wp-06-night-sky",        "name": "Night Sky",         "images": ["01","02","03","04","05"] },
+    { "id": "wp-07-soft-gradient",    "name": "Soft Gradient",     "images": ["01","02","03","04","05"] },
+    { "id": "wp-08-liquid-glass",     "name": "Liquid Glass",      "images": ["01","02","03","04","05"] },
+    { "id": "wp-09-paper-grain",      "name": "Paper Grain",       "images": ["01","02","03","04","05"] },
+    { "id": "wp-10-minimal-geometry", "name": "Minimal Geometry",  "images": ["01","02","03","04","05"] },
+    { "id": "wp-11-floral-macro",     "name": "Floral Macro",      "images": ["01","02","03","04","05"] },
+    { "id": "wp-12-rain-window",      "name": "Rain & Window",     "images": ["01","02","03","04","05"] },
+    { "id": "wp-13-city-dusk",        "name": "City Dusk",         "images": ["01","02","03","04","05"] },
+    { "id": "wp-14-snow-winter",      "name": "Snow & Winter",     "images": ["01","02","03","04","05"] },
+    { "id": "wp-15-autumn",           "name": "Autumn",            "images": ["01","02","03","04","05"] },
+    { "id": "wp-16-tropical",         "name": "Tropical",          "images": ["01","02","03","04","05"] },
+    { "id": "wp-17-watercolor",       "name": "Watercolor",        "images": ["01","02","03","04","05"] },
+    { "id": "wp-18-silk-fabric",      "name": "Silk & Fabric",     "images": ["01","02","03","04","05"] },
+    { "id": "wp-19-terrazzo-confetti","name": "Terrazzo & Confetti","images": ["01","02","03","04","05"] },
+    { "id": "wp-20-aurora-light-leak","name": "Aurora & Light Leak","images": ["01","02","03","04","05"] }
+  ],
+  "backgrounds": [
+    "wp-21", "wp-22", "wp-23", "wp-24", "wp-25", "wp-26", "wp-27", "wp-28", "wp-29", "wp-30",
+    "wp-31", "wp-32", "wp-33", "wp-34", "wp-35", "wp-36", "wp-37", "wp-38", "wp-39", "wp-40",
+    "wp-41", "wp-42", "wp-43", "wp-44", "wp-45", "wp-46", "wp-47", "wp-48", "wp-49", "wp-50",
+    "wp-51", "wp-52", "wp-53", "wp-54", "wp-55", "wp-56", "wp-57", "wp-58", "wp-59"
+  ]
+}
