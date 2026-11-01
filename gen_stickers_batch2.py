@@ -69,7 +69,7 @@ S = {
  "st-27-friends-family": ["best friend necklaces", "sleepover pillow", "group photo", "friendship pin", "piggyback"],
  "st-28-just-me": ["face mask", "sunset walk", "headphones chill", "skincare bottle", "warm blanket"],
  "st-29-mood": ["neutral face", "confused face", "silly tongue face", "star eyes", "shy face"],
- "st-30-pets": ["goldfish bowl", "cat bed", "dog bone", "bird cage", "pet collar"],
+ "st-30-pets": ["dog leash", "cat bed", "hamster wheel", "bird cage", "pet collar"],
  "st-31-places": ["desert", "waterfall", "stadium", "school", "harbor"],
  "st-32-travel": ["train", "boat", "map", "hotel key", "sunglasses"],
  "st-33-vietnam": ["banh mi", "cyclo", "incense village", "water puppet", "basket boat"],
