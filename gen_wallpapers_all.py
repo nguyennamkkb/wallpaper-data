@@ -35,6 +35,7 @@ POLL = 3.0
 TIMEOUT = 420.0
 MAX_ATTEMPTS = 4
 MAX_WORKERS = int(os.environ.get("WP_CONCURRENCY", "4"))
+REF_LIMIT = int(os.environ.get("WP_REFS", "4"))
 
 BASE_PROMPT = ("{style}. {shot}. Square 1:1 wallpaper, edge-to-edge composition filling the whole "
                "frame, no text, no watermark, no border, no frame, high detail, natural clean rendering")
@@ -118,7 +119,7 @@ P = {
    "olive gradient into cream",
    "apricot diagonal gradient into lilac",
    "mint vertical gradient into white"]),
- "wp-08-liquid-glass": ("Abstract liquid glass artwork, refraction and caustics, translucent shapes, studio light", [
+ "wp-08-liquid-glass": ("Minimal liquid glass artwork, one clean translucent glass form, soft studio light, uncluttered pastel space", [
    "glass sphere refracting a striped backdrop",
    "water caustics playing on a wall",
    "translucent gel sheet with a soft shadow",
@@ -129,7 +130,7 @@ P = {
    "clear resin block with bright inclusions",
    "glass shards scattered on a pale gradient",
    "prism splitting light on a soft surface"]),
- "wp-09-paper-grain": ("Minimal paper texture artwork, natural fiber grain, soft studio shadows", [
+ "wp-09-paper-grain": ("Minimal paper texture photograph, a single sheet of paper filling the frame, natural fiber grain, soft even studio light, no objects", [
    "folded paper with a soft shadow crease",
    "deckled edge paper on gray",
    "recycled pulp texture with flecks",
@@ -321,7 +322,7 @@ def run_job(pack_id, style, shot, i):
     if best.exists() and thumb.exists():
         return True
     prompt = BASE_PROMPT.format(style=style, shot=shot)
-    refs = pack_refs(pack_id)
+    refs = pack_refs(pack_id, REF_LIMIT) if REF_LIMIT > 0 else []
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
             payload = {"prompt": prompt, "size": "1:1", "n": 1, "async": True}
