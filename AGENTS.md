@@ -24,6 +24,25 @@ python3 gen_stickers_all.py ST-31-places ST-32-travel ST-33-vietnam ST-34-food S
   chủ thể xanh thật (lá, ếch, graffiti). Audit riêng: `python3 despill_edges.py --report`.
 - Output: `out/sticker-new/<pack>/01..10.png` (full-res) và `out/sticker-figma/<pack>/06..15.png` (480px).
 
+### Batch 10 wallpaper / pack — `gen_wallpapers_all.py`
+
+`gen_wallpapers_all.py` chứa config 20 pack (`wp-01…wp-20`: style + 10 shot KHÔNG trùng 5 ảnh gốc)
+và tự gen 1:1 → crop vuông → 1000×1000 WebP + thumb 333. Chạy theo nhóm pack, resumable:
+
+```bash
+python3 gen_wallpapers_all.py wp-01-golden-hour wp-02-misty-mountain wp-03-ocean-coast
+WP_REFS=0 python3 gen_wallpapers_all.py wp-17-watercolor wp-19-terrazzo-confetti   # pack abstract
+```
+
+- **Ref**: mặc định 4 ảnh gốc `image/<pack>/01..04.webp` (JPEG base64) để giữ chất liệu/ánh sáng.
+  `WP_REFS=0` tắt — **bắt buộc với pack abstract** (gradient, glass, paper, watercolor, terrazzo):
+  ref làm model lặp lại đúng ảnh mẫu và sinh loạt ảnh gần giống nhau.
+- Output: `out/wp-new/<pack>/01..10.webp` (+ `_thumb`).
+- **Publish**: `python3 publish_wallpapers.py` → copy thành `image/<pack>/06..15.webp` (+thumb) và
+  cập nhật `data/wallpaper.json` (chỉ pack đủ 15 ảnh mới được ghi; giữ format canh cột như cũ).
+- **Kiểm tra sau khi gen**: luôn soi contact sheet — gateway đôi khi trả nhầm ảnh của task khác
+  (đã gặp 3 lần); xoá file lỗi rồi chạy lại script (chỉ gen lại ảnh thiếu).
+
 ### Tạo lẻ từng ảnh
 
 1. **Prompt** (theo `generating-oneshot-image-prompts`): mô tả 1 chủ thể, style "soft 3D clay kawaii"
