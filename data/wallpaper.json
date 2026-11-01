@@ -16,11 +16,11 @@
     { "id": "wp-13-city-dusk",        "name": "City Dusk",         "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
     { "id": "wp-14-snow-winter",      "name": "Snow & Winter",     "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
     { "id": "wp-15-autumn",           "name": "Autumn",            "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
-    { "id": "wp-16-tropical",         "name": "Tropical",          "images": ["01","02","03","04","05"] },
-    { "id": "wp-17-watercolor",       "name": "Watercolor",        "images": ["01","02","03","04","05"] },
-    { "id": "wp-18-silk-fabric",      "name": "Silk & Fabric",     "images": ["01","02","03","04","05"] },
-    { "id": "wp-19-terrazzo-confetti","name": "Terrazzo & Confetti","images": ["01","02","03","04","05"] },
-    { "id": "wp-20-aurora-light-leak","name": "Aurora & Light Leak","images": ["01","02","03","04","05"] }
+    { "id": "wp-16-tropical",         "name": "Tropical",          "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-17-watercolor",       "name": "Watercolor",        "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-18-silk-fabric",      "name": "Silk & Fabric",     "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-19-terrazzo-confetti","name": "Terrazzo & Confetti","images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-20-aurora-light-leak","name": "Aurora & Light Leak","images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] }
   ],
   "backgrounds": [
     "wp-21", "wp-22", "wp-23", "wp-24", "wp-25", "wp-26", "wp-27", "wp-28", "wp-29", "wp-30",
