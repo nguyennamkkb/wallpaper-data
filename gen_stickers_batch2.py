@@ -75,7 +75,7 @@ S = {
  "st-33-vietnam": ["banh mi", "cyclo", "incense village", "water puppet", "basket boat"],
  "st-34-food": ["salad bowl", "pancake stack", "waffle", "noodle cup", "burrito"],
  "st-35-cafe": ["cold brew", "cake stand", "sugar bowl", "cafe window", "wifi sign"],
- "st-36-weather": ["frost pattern", "sandstorm", "fog bank", "sun halo", "dust devil"],
+ "st-36-weather": ["frost pattern", "sandstorm", "monsoon downpour", "sun halo", "aurora sky"],
  "st-37-plants": ["orchid", "lily", "pothos", "aloe vera", "bamboo shoot"],
  "st-38-sea": ["whale", "dolphin", "seaweed", "sand dollar", "message bottle"],
  "st-39-space": ["telescope", "black hole", "space helmet", "meteor", "star map"],
