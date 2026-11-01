@@ -1,11 +1,11 @@
 {
   "version": "wallpaper-1",
   "packs": [
-    { "id": "wp-01-golden-hour",      "name": "Golden Hour",       "images": ["01","02","03","04","05"] },
-    { "id": "wp-02-misty-mountain",   "name": "Misty Mountain",    "images": ["01","02","03","04","05"] },
-    { "id": "wp-03-ocean-coast",      "name": "Ocean & Coast",     "images": ["01","02","03","04","05"] },
-    { "id": "wp-04-desert-dunes",     "name": "Desert Dunes",      "images": ["01","02","03","04","05"] },
-    { "id": "wp-05-forest-light",     "name": "Forest Light",      "images": ["01","02","03","04","05"] },
+    { "id": "wp-01-golden-hour",      "name": "Golden Hour",       "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-02-misty-mountain",   "name": "Misty Mountain",    "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-03-ocean-coast",      "name": "Ocean & Coast",     "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-04-desert-dunes",     "name": "Desert Dunes",      "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
+    { "id": "wp-05-forest-light",     "name": "Forest Light",      "images": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15"] },
     { "id": "wp-06-night-sky",        "name": "Night Sky",         "images": ["01","02","03","04","05"] },
     { "id": "wp-07-soft-gradient",    "name": "Soft Gradient",     "images": ["01","02","03","04","05"] },
     { "id": "wp-08-liquid-glass",     "name": "Liquid Glass",      "images": ["01","02","03","04","05"] },
